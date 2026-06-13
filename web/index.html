@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日知录 — 每天搞懂一个概念</title>
+  <meta name="description" content="每天花3分钟，搞懂一个有意思的跨学科概念。哲学、科学、经济、文学——轮流来。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo" data-nav="home">日知录</a>
+      <span class="subtitle">每天搞懂一个概念</span>
+      <button id="themeToggle" class="theme-btn" title="切换深色模式">🌙</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- 首页：卡片网格 -->
+    <section id="home-view">
+      <div class="hero">
+        <h1>每天 3 分钟<br>搞懂一个概念</h1>
+        <p>哲学、科学、经济、文学、思想实验、认知偏误——轮流来。从底层原理出发，用一个类比让你记住它。</p>
+      </div>
+      <div id="posts-grid" class="posts-grid">
+        <p class="loading">加载中...</p>
+      </div>
+    </section>
+
+    <!-- 文章页 -->
+    <article id="post-view" class="post-view" style="display:none;">
+      <button class="back-btn" data-nav="home">← 返回</button>
+      <div id="post-meta" class="post-meta"></div>
+      <div id="post-content" class="post-content"></div>
+    </article>
+
+    <!-- 关于页 -->
+    <section id="about-view" class="about-view" style="display:none;">
+      <h2>关于日知录</h2>
+      <p>「日知录」取名自顾炎武的同名著作。每天一篇短文，讲解一个跨学科概念。</p>
+      <p>所有文章由 AI 辅助生成，经过人工审校。如果你发现错误或有改进建议，欢迎到 <a href="https://github.com" target="_blank">GitHub</a> 提 Issue。</p>
+      <h3>领域轮值</h3>
+      <table class="schedule-table">
+        <tr><td>周一</td><td>哲学</td></tr>
+        <tr><td>周二</td><td>科学</td></tr>
+        <tr><td>周三</td><td>经济/社会</td></tr>
+        <tr><td>周四</td><td>文学/艺术</td></tr>
+        <tr><td>周五</td><td>思想实验</td></tr>
+        <tr><td>周六</td><td>认知偏误</td></tr>
+        <tr><td>周日</td><td>休息</td></tr>
+      </table>
+      <p class="rss-link">
+        <a href="feed.xml">📡 RSS 订阅</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <a href="#" data-nav="home">首页</a>
+      <span class="sep">·</span>
+      <a href="#" data-nav="about">关于</a>
+      <span class="sep">·</span>
+      <span>由 AI 辅助生成</span>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
